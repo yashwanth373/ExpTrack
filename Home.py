@@ -1,8 +1,9 @@
 from PyQt5 import QtWidgets,uic
-from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton,QStackedWidget,QLineEdit, QWidget,QGraphicsDropShadowEffect,QComboBox
+from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton,QStackedWidget,QLineEdit, QWidget,QGraphicsDropShadowEffect,QComboBox,QLabel
 from PyQt5.QtGui import QIntValidator,QColor
 import sys,os
-
+from datetime import datetime
+import db
 
 
 
@@ -24,6 +25,8 @@ class HomePage(QMainWindow):
 
         self.adjustComboBox()
 
+        self.prepareFront()
+
     def display(self):
         self.show()
         '''
@@ -40,29 +43,54 @@ class HomePage(QMainWindow):
 
     def addExpense(self):
         # get expense amount from input box
-
+        expense = int(self.findChild(QLineEdit,"NewExpenseInput").text())
+        # clear input box
+        self.findChild(QLineEdit,"NewExpenseInput").clear()
         # get expense category from category drop box
-
+        category = self.findChild(QComboBox,"ExpenseCategory").currentText()
         #get current timestamp
-
+        timestamp = int(datetime.now().timestamp())
         #add it to db
-
+        db.insertExpense(timestamp, category, expense)
         #update frontend statistics
-
-        pass
+        self.prepareFront()
     
     def next(self, category):
         # Prepare all the data required in second page here
 
-
-
-
-
-
-
-
         # Till here and then increment index to 1
         self.findChild(QStackedWidget,"stackedWidget").setCurrentIndex(1)
+    
+    def prepareFront(self):
+        # this month expenses count
+        thisMonthExpensesCount = db.expensesCountThisMonth()
+        # this month expenses sum
+        thisMonthExpensesSum = db.totalExpenseThisMonth()
+        # last month expenses sum
+        lastMonthExpensesSum = db.totalExpenseLastMonth()
+        # % change from last month
+        if lastMonthExpensesSum == 0:
+            percentage_change = 0
+        else:
+            percentage_change = round((thisMonthExpensesSum - lastMonthExpensesSum) / lastMonthExpensesSum * 100,1)
+        # this month expense by cateogory
+        thisMonthExpensesByCategory = db.expenseByCategory()
+
+        # update frontend
+        self.findChild(QLabel,"ExpensesCount").setText("Number of expenses this month: "+str(thisMonthExpensesCount))
+
+        self.findChild(QLabel,"MonthExpense").setText("Rs. "+str(thisMonthExpensesSum))
+
+        if percentage_change > 0:
+            self.findChild(QLabel,"MonthExpenseSubTitle").setText(str(percentage_change)+"% more than last month’s expense\nLast Month’s total expense: Rs. "+str(lastMonthExpensesSum))
+        elif percentage_change < 0:
+            self.findChild(QLabel,"MonthExpenseSubTitle").setText(str(percentage_change * -1)+"% less than last month’s expense\nLast Month’s total expense: Rs. "+str(lastMonthExpensesSum))
+        else:
+            self.findChild(QLabel,"MonthExpenseSubTitle").setText("No expenses in last month\nLast Month’s total expense: Rs. "+str(lastMonthExpensesSum))
+        
+        for cat in thisMonthExpensesByCategory:
+            self.findChild(QLabel,cat[0]+"Expense").setText("Rs. "+str(cat[1]))
+        pass
 
 
 ########## Styling functions ##########

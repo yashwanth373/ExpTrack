@@ -36,5 +36,14 @@ def totalExpenseLastMonth():
     
     expenses = conn.execute("SELECT SUM(expense) FROM EXPENSES WHERE timestamp >= ? AND timestamp <= ?", (lastMonthBegTime, lastMonthEndTime))
 
-    return expenses.fetchone()[0]
+    return expenses.fetchone()[0] if expenses.fetchone()[0] else 0
 
+def expenseByCategory():
+    begTime = int(datetime.today().replace(day=1,hour=0,minute=0,second=0,microsecond=0).timestamp())
+
+    expenses = conn.execute("SELECT category, SUM(expense) FROM EXPENSES WHERE timestamp >= ? GROUP BY category", (begTime,))
+
+    return expenses.fetchall()
+
+
+print(totalExpenseLastMonth())

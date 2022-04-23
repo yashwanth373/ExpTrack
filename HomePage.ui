@@ -289,7 +289,7 @@ color:#6A6DB6;font-size:18px;font-family:Monsterrat;</string>
         <string notr="true">border:none;outline:none;background-color:#9EA3F5;color:#FFF; border-radius:5px;text-align:center;font-family:Monsterrat;</string>
        </property>
        <property name="currentText">
-        <string>Entertainment</string>
+        <string>Food</string>
        </property>
        <property name="iconSize">
         <size>
@@ -643,7 +643,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -767,7 +767,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -894,7 +894,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1018,7 +1018,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1142,7 +1142,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -1266,7 +1266,7 @@ Last Month’s total expense: Rs. 2160</string>
          <string notr="true">font-family:Monsterrat;color:white;background:transparent;</string>
         </property>
         <property name="text">
-         <string>Rs. 152</string>
+         <string>Rs. 0</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
