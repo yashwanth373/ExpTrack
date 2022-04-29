@@ -539,7 +539,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="FoodButton">
         <property name="geometry">
@@ -554,7 +554,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -649,6 +649,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>FoodIcon</zorder>
+       <zorder>FoodTitle</zorder>
+       <zorder>FoodExpense</zorder>
+       <zorder>FoodButton</zorder>
       </widget>
       <widget class="QWidget" name="TravelCard" native="true">
        <property name="geometry">
@@ -663,7 +667,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="TravelButton">
         <property name="geometry">
@@ -678,7 +682,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -773,6 +777,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>TravelIcon</zorder>
+       <zorder>TravelTitle</zorder>
+       <zorder>TravelExpense</zorder>
+       <zorder>TravelButton</zorder>
       </widget>
       <widget class="QWidget" name="GroceriesCard" native="true">
        <property name="geometry">
@@ -787,7 +795,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="GroceriesButton">
         <property name="geometry">
@@ -805,7 +813,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -900,6 +908,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>GroceriesIcon</zorder>
+       <zorder>GroceriesTitle</zorder>
+       <zorder>GroceriesExpense</zorder>
+       <zorder>GroceriesButton</zorder>
       </widget>
       <widget class="QWidget" name="EntertainmentCard" native="true">
        <property name="geometry">
@@ -914,7 +926,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="EntertainmentButton">
         <property name="geometry">
@@ -929,7 +941,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1024,6 +1036,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>EntertainmentIcon</zorder>
+       <zorder>EntertainmentTitle</zorder>
+       <zorder>EntertainmentExpense</zorder>
+       <zorder>EntertainmentButton</zorder>
       </widget>
       <widget class="QWidget" name="ShoppingCard" native="true">
        <property name="geometry">
@@ -1038,7 +1054,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="ShoppingButton">
         <property name="geometry">
@@ -1053,7 +1069,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1148,6 +1164,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>ShoppingIcon</zorder>
+       <zorder>ShoppingTitle</zorder>
+       <zorder>ShoppingExpense</zorder>
+       <zorder>ShoppingButton</zorder>
       </widget>
       <widget class="QWidget" name="BillsCard" native="true">
        <property name="geometry">
@@ -1162,7 +1182,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="BillsButton">
         <property name="geometry">
@@ -1177,7 +1197,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1272,6 +1292,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>BillsIcon</zorder>
+       <zorder>BillsTitle</zorder>
+       <zorder>BillsExpense</zorder>
+       <zorder>BillsButton</zorder>
       </widget>
      </widget>
     </widget>
@@ -1403,367 +1427,85 @@ border-style:hidden;
         <normaloff>assets/icons8-left-arrow-48.png</normaloff>assets/icons8-left-arrow-48.png</iconset>
       </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>100</y>
+        <x>-2</x>
+        <y>88</y>
         <width>501</width>
-        <height>741</height>
+        <height>761</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QScrollArea" name="scrollArea">
          <property name="styleSheet">
-          <string notr="true">border-style:hidden</string>
+          <string notr="true"/>
          </property>
          <property name="widgetResizable">
           <bool>true</bool>
          </property>
-         <widget class="QWidget" name="scrollAreaWidgetContents">
+         <widget class="QWidget" name="scrollAreaWidgetContents_3">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>499</width>
-            <height>739</height>
+            <width>476</width>
+            <height>804</height>
            </rect>
           </property>
-          <widget class="QWidget" name="verticalLayoutWidget_2">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>0</y>
-             <width>481</width>
-             <height>741</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout">
-              <item>
-               <spacer name="horizontalSpacer_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::MinimumExpanding</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>5</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_3">
-                <property name="maximumSize">
-                 <size>
-                  <width>52</width>
-                  <height>52</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap>assets/icons8-aeroplane-64.png</pixmap>
-                </property>
-                <property name="scaledContents">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color:#ffffff;font-size:20px;font-family:Monsterrat;</string>
-                </property>
-                <property name="text">
-                 <string>Expences On Food Category              </string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_2">
-              <item>
-               <widget class="QLabel" name="label_4">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color:#ffffff;font-size:15px;font-family:Monsterrat;</string>
-                </property>
-                <property name="text">
-                 <string>This Month</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border:none;outline:none; border-radius:5px;text-align:center;color:#ffffff;font-size:15px;font-family:Monsterrat;</string>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>Sort By</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Date</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expenses Low To High</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expenses High To Low</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QWidget" name="widget" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>320</height>
-                 </size>
-                </property>
-                <widget class="QLabel" name="label_5">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>20</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_6">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>70</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_7">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>120</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_3">
-              <item>
-               <widget class="QLabel" name="label">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">color:#ffffff;font-size:15px;font-family:Monsterrat;</string>
-                </property>
-                <property name="text">
-                 <string>Last Month</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox_2">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>36</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">border:none;outline:none; border-radius:5px;text-align:center;color:#ffffff;font-size:15px;font-family:Monsterrat;</string>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>Sort By</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Date</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expenses Low To High</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Expenses High To Low</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_4">
-              <item>
-               <widget class="QWidget" name="widget_2" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>220</height>
-                 </size>
-                </property>
-                <widget class="QLabel" name="label_8">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>20</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_9">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>70</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLabel" name="label_10">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>120</y>
-                   <width>460</width>
-                   <height>40</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border:1px ;
-border-radius:6px;
-background:#3A2C5F;
-color:#ffffff</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <layout class="QVBoxLayout" name="chatLayout">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
         </widget>
        </item>

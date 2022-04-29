@@ -59,6 +59,7 @@ class HomePage(QMainWindow):
         # Prepare all the data required in second page here
 
         # Till here and then increment index to 1
+        print(category)
         self.findChild(QStackedWidget,"stackedWidget").setCurrentIndex(1)
     
     def prepareFront(self):
