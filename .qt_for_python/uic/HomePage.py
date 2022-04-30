@@ -503,13 +503,14 @@ class Ui_HomePage(object):
         self.AppHelp_2.setPixmap(QtGui.QPixmap("/Users/koushik_g/ExpTrack/assets/icons8-help-50.png"))
         self.AppHelp_2.setScaledContents(True)
         self.AppHelp_2.setObjectName("AppHelp_2")
-        self.commandLinkButton = QtWidgets.QCommandLinkButton(self.page_2)
-        self.commandLinkButton.setGeometry(QtCore.QRect(0, 60, 81, 41))
+        self.Back = QtWidgets.QCommandLinkButton(self.page_2)
+        self.Back.setGeometry(QtCore.QRect(0, 60, 81, 41))
         font = QtGui.QFont()
         font.setFamily("Monsterrat")
         font.setPointSize(-1)
-        self.commandLinkButton.setFont(font)
-        self.commandLinkButton.setStyleSheet("QCommandLinkButton{\n"
+        self.Back.setFont(font)
+        self.Back.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.Back.setStyleSheet("QCommandLinkButton{\n"
 "color:#ffffff;font-size:15px;font-family:Monsterrat;\n"
 "}\n"
 "QCommandLinkButton:hover{\n"
@@ -517,8 +518,8 @@ class Ui_HomePage(object):
 "}")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("/Users/koushik_g/ExpTrack/assets/icons8-left-arrow-48.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.commandLinkButton.setIcon(icon)
-        self.commandLinkButton.setObjectName("commandLinkButton")
+        self.Back.setIcon(icon)
+        self.Back.setObjectName("Back")
         self.layoutWidget = QtWidgets.QWidget(self.page_2)
         self.layoutWidget.setGeometry(QtCore.QRect(0, 100, 501, 741))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -570,99 +571,27 @@ class Ui_HomePage(object):
         self.label_10.setStyleSheet("font-size:15px;font-family:Monsterrat;color:#ffffff")
         self.label_10.setObjectName("label_10")
         self.horizontalLayout_4.addWidget(self.label_10)
-        self.comboBox_3 = QtWidgets.QComboBox(self.scrollAreaWidgetContents_3)
-        self.comboBox_3.setMaximumSize(QtCore.QSize(16777215, 28))
-        self.comboBox_3.setStyleSheet("font-size:15px;font-family:Monsterrat;background:#604E91;\n"
-"color:#ffffff")
-        self.comboBox_3.setObjectName("comboBox_3")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.horizontalLayout_4.addWidget(self.comboBox_3)
+        self.sortBy_1 = QtWidgets.QComboBox(self.scrollAreaWidgetContents_3)
+        self.sortBy_1.setMaximumSize(QtCore.QSize(16777215, 28))
+        self.sortBy_1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.sortBy_1.setStyleSheet("border:none;\n"
+"            outline:none;\n"
+"            \n"
+"            color:#FFF;\n"
+"            border-radius:5px;\n"
+"            text-align:center;\n"
+"            font-family:Monsterrat;\n"
+"        ")
+        self.sortBy_1.setObjectName("sortBy_1")
+        self.sortBy_1.addItem("")
+        self.sortBy_1.addItem("")
+        self.sortBy_1.addItem("")
+        self.sortBy_1.addItem("")
+        self.horizontalLayout_4.addWidget(self.sortBy_1)
         self.chatLayout.addLayout(self.horizontalLayout_4)
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.label_13 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_13.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_13.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_13.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_13.setText("")
-        self.label_13.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_13.setObjectName("label_13")
-        self.verticalLayout.addWidget(self.label_13)
-        self.label_21 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_21.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_21.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_21.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_21.setText("")
-        self.label_21.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_21.setObjectName("label_21")
-        self.verticalLayout.addWidget(self.label_21)
-        self.label_22 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_22.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_22.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_22.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_22.setText("")
-        self.label_22.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_22.setObjectName("label_22")
-        self.verticalLayout.addWidget(self.label_22)
-        self.label_19 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_19.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_19.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_19.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_19.setText("")
-        self.label_19.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_19.setObjectName("label_19")
-        self.verticalLayout.addWidget(self.label_19)
-        self.label_20 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_20.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_20.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_20.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_20.setText("")
-        self.label_20.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_20.setObjectName("label_20")
-        self.verticalLayout.addWidget(self.label_20)
-        self.label_12 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_12.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_12.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_12.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_12.setText("")
-        self.label_12.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_12.setObjectName("label_12")
-        self.verticalLayout.addWidget(self.label_12)
-        self.label_2 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_2.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_2.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_2.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_2.setText("")
-        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_2.setObjectName("label_2")
-        self.verticalLayout.addWidget(self.label_2)
-        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Ignored)
-        self.verticalLayout.addItem(spacerItem2)
-        self.chatLayout.addLayout(self.verticalLayout)
+        self.thisMonth_layout = QtWidgets.QVBoxLayout()
+        self.thisMonth_layout.setObjectName("thisMonth_layout")
+        self.chatLayout.addLayout(self.thisMonth_layout)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
@@ -672,65 +601,22 @@ class Ui_HomePage(object):
         self.label_11.setStyleSheet("font-size:15px;font-family:Monsterrat;color:#ffffff")
         self.label_11.setObjectName("label_11")
         self.horizontalLayout_6.addWidget(self.label_11)
-        self.comboBox_4 = QtWidgets.QComboBox(self.scrollAreaWidgetContents_3)
-        self.comboBox_4.setMaximumSize(QtCore.QSize(16777215, 28))
-        self.comboBox_4.setStyleSheet("font-size:15px;font-family:Monsterrat;background:#604E91;\n"
+        self.sortBy_2 = QtWidgets.QComboBox(self.scrollAreaWidgetContents_3)
+        self.sortBy_2.setMaximumSize(QtCore.QSize(16777215, 28))
+        self.sortBy_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.sortBy_2.setStyleSheet("font-size:15px;font-family:Monsterrat;background:#604E91;\n"
 "color:#ffffff")
-        self.comboBox_4.setObjectName("comboBox_4")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.comboBox_4.addItem("")
-        self.horizontalLayout_6.addWidget(self.comboBox_4)
+        self.sortBy_2.setObjectName("sortBy_2")
+        self.sortBy_2.addItem("")
+        self.sortBy_2.addItem("")
+        self.sortBy_2.addItem("")
+        self.sortBy_2.addItem("")
+        self.horizontalLayout_6.addWidget(self.sortBy_2)
         self.horizontalLayout_5.addLayout(self.horizontalLayout_6)
         self.chatLayout.addLayout(self.horizontalLayout_5)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label_17 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_17.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_17.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_17.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_17.setText("")
-        self.label_17.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_17.setObjectName("label_17")
-        self.verticalLayout_2.addWidget(self.label_17)
-        self.label_18 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_18.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_18.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_18.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_18.setText("")
-        self.label_18.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_18.setObjectName("label_18")
-        self.verticalLayout_2.addWidget(self.label_18)
-        self.label_16 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_16.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_16.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_16.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_16.setText("")
-        self.label_16.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_16.setObjectName("label_16")
-        self.verticalLayout_2.addWidget(self.label_16)
-        self.label_14 = QtWidgets.QLabel(self.scrollAreaWidgetContents_3)
-        self.label_14.setMinimumSize(QtCore.QSize(460, 40))
-        self.label_14.setMaximumSize(QtCore.QSize(460, 40))
-        self.label_14.setStyleSheet("border:1px ;\n"
-"border-radius:6px;\n"
-"background:#3A2C5F;\n"
-"color:#ffffff")
-        self.label_14.setText("")
-        self.label_14.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_14.setObjectName("label_14")
-        self.verticalLayout_2.addWidget(self.label_14)
-        self.chatLayout.addLayout(self.verticalLayout_2)
+        self.prevMonth_layout = QtWidgets.QVBoxLayout()
+        self.prevMonth_layout.setObjectName("prevMonth_layout")
+        self.chatLayout.addLayout(self.prevMonth_layout)
         self.verticalLayout_5.addLayout(self.chatLayout)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayout_4.addWidget(self.scrollArea)
@@ -738,7 +624,7 @@ class Ui_HomePage(object):
         HomePage.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(HomePage)
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(HomePage)
 
     def retranslateUi(self, HomePage):
@@ -775,15 +661,15 @@ class Ui_HomePage(object):
         self.BillsTitle.setText(_translate("HomePage", "Bills"))
         self.BillsExpense.setText(_translate("HomePage", "Rs. 0"))
         self.AppTitle_2.setText(_translate("HomePage", "ExpTrack"))
-        self.commandLinkButton.setText(_translate("HomePage", "Back"))
+        self.Back.setText(_translate("HomePage", "Back"))
         self.label_4.setText(_translate("HomePage", "Expences On Food Category         "))
         self.label_10.setText(_translate("HomePage", "This Month"))
-        self.comboBox_3.setItemText(0, _translate("HomePage", "Sort By"))
-        self.comboBox_3.setItemText(1, _translate("HomePage", "Date"))
-        self.comboBox_3.setItemText(2, _translate("HomePage", "Expenses Low To High"))
-        self.comboBox_3.setItemText(3, _translate("HomePage", "Expenses High To Low"))
+        self.sortBy_1.setItemText(0, _translate("HomePage", "Sort By"))
+        self.sortBy_1.setItemText(1, _translate("HomePage", "Date"))
+        self.sortBy_1.setItemText(2, _translate("HomePage", "Expenses Low To High"))
+        self.sortBy_1.setItemText(3, _translate("HomePage", "Expenses High To Low"))
         self.label_11.setText(_translate("HomePage", "Last Month"))
-        self.comboBox_4.setItemText(0, _translate("HomePage", "Sort By"))
-        self.comboBox_4.setItemText(1, _translate("HomePage", "Date"))
-        self.comboBox_4.setItemText(2, _translate("HomePage", "Expenses Low To High"))
-        self.comboBox_4.setItemText(3, _translate("HomePage", "Expenses High To Low"))
+        self.sortBy_2.setItemText(0, _translate("HomePage", "Sort By"))
+        self.sortBy_2.setItemText(1, _translate("HomePage", "Date"))
+        self.sortBy_2.setItemText(2, _translate("HomePage", "Expenses Low To High"))
+        self.sortBy_2.setItemText(3, _translate("HomePage", "Expenses High To Low"))

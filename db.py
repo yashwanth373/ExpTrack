@@ -36,7 +36,12 @@ def totalExpenseLastMonth():
     
     expenses = conn.execute("SELECT SUM(expense) FROM EXPENSES WHERE timestamp >= ? AND timestamp <= ?", (lastMonthBegTime, lastMonthEndTime))
 
-    return expenses.fetchone()[0] if expenses.fetchone()[0] else 0
+    # return expenses.fetchone()[0] if expenses.fetchone()[0] else 0
+    sum = expenses.fetchone()[0]
+    if sum is None:
+        return 0
+    return sum
+    
 
 def expenseByCategory():
     begTime = int(datetime.today().replace(day=1,hour=0,minute=0,second=0,microsecond=0).timestamp())
@@ -44,6 +49,26 @@ def expenseByCategory():
     expenses = conn.execute("SELECT category, SUM(expense) FROM EXPENSES WHERE timestamp >= ? GROUP BY category", (begTime,))
 
     return expenses.fetchall()
+# def fun(e):
+#     return e[0]
 
+def listByCategoryThisMonth(category):
+    begTime = int(datetime.today().replace(day=1,hour=0,minute=0,second=0,microsecond=0).timestamp())
+    expenseList=conn.execute("SELECT expense,timestamp FROM EXPENSES WHERE category=? AND timestamp >= ?",(category,begTime))
+    return expenseList.fetchall()
 
-print(totalExpenseLastMonth())
+def listByCategoryPreviousMonth(category):
+    begTime = int(datetime.today().replace(month=1,day=1,hour=0,minute=0,second=0,microsecond=0).timestamp())
+    last_day_of_prev_month = date.today().replace(day=1) - timedelta(days=1)
+    lastMonthEndTime = int(datetime.combine(last_day_of_prev_month, time(23,59,59)).timestamp())
+    expenseList=conn.execute("SELECT expense,timestamp FROM EXPENSES WHERE category=? AND timestamp >= ? AND timestamp<=?",(category,begTime,lastMonthEndTime))
+    return expenseList.fetchall()
+
+#insertExpense(int(datetime.today().replace(month=3,day=1).timestamp()),"Shopping",60)
+# ex=listByCategoryPreviousMonth("Shopping")
+# print(datetime.fromtimestamp(ex[3][1]))
+# print(int(datetime.today().replace(month=3).timestamp()))
+
+# print(totalExpenseLastMonth())
+#for i in ex:
+#print(datetime.today().replace(month=1,day=1,hour=0,minute=0,second=0,microsecond=0))
