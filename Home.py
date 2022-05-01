@@ -24,7 +24,7 @@ class HomePage(QMainWindow):
 
         self.onlyInt = QIntValidator(0,99999)
         self.findChild(QLineEdit,"NewExpenseInput").setValidator(self.onlyInt)
-
+        self.findChild(QStackedWidget,"stackedWidget").setCurrentIndex(0)
         self.vlayout=self.findChild(QVBoxLayout,"thisMonth_layout")
         self.vlayout1=self.findChild(QVBoxLayout,"prevMonth_layout")
         self.vspacer=QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
@@ -66,6 +66,8 @@ class HomePage(QMainWindow):
             "border-radius:6px;\n"
             "background:#3A2C5F;\n"
             "font-family:Monsterrat;\n"
+            "font-size:15px;\n"
+            "font-weight:bold;\n"
             "color:#ffffff")
         # expense_lable.setText("Rs."+str(expense)+"\t".expandtabs(50)+str(day_)+" "+monthName+" "+str(year_)+" "+str(hour_)+":"+str(minute_)+"\t")
         expense_lable.setText("\t".expandtabs(4)+"Rs."+str(expense))
@@ -77,6 +79,8 @@ class HomePage(QMainWindow):
         time_lable.setStyleSheet(
             "border-radius:6px;\n"
             "background:#3A2C5F;\n"
+            "font-size:15px;\n"
+            "font-weight:bold;\n"
             "color:#ffffff")
         time_lable.setText(str(day_)+" "+monthName+" "+str(year_)+" "+str(hour_)+":"+str(minute_)+"\t".expandtabs(4))
         time_lable.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)

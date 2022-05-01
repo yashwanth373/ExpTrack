@@ -539,7 +539,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="FoodButton">
         <property name="geometry">
@@ -554,7 +554,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -649,6 +649,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>FoodIcon</zorder>
+       <zorder>FoodTitle</zorder>
+       <zorder>FoodExpense</zorder>
+       <zorder>FoodButton</zorder>
       </widget>
       <widget class="QWidget" name="TravelCard" native="true">
        <property name="geometry">
@@ -663,7 +667,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="TravelButton">
         <property name="geometry">
@@ -678,7 +682,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -773,6 +777,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>TravelIcon</zorder>
+       <zorder>TravelTitle</zorder>
+       <zorder>TravelExpense</zorder>
+       <zorder>TravelButton</zorder>
       </widget>
       <widget class="QWidget" name="GroceriesCard" native="true">
        <property name="geometry">
@@ -787,7 +795,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="GroceriesButton">
         <property name="geometry">
@@ -805,7 +813,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -900,6 +908,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>GroceriesIcon</zorder>
+       <zorder>GroceriesTitle</zorder>
+       <zorder>GroceriesExpense</zorder>
+       <zorder>GroceriesButton</zorder>
       </widget>
       <widget class="QWidget" name="EntertainmentCard" native="true">
        <property name="geometry">
@@ -914,7 +926,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="EntertainmentButton">
         <property name="geometry">
@@ -929,7 +941,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1024,6 +1036,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>EntertainmentIcon</zorder>
+       <zorder>EntertainmentTitle</zorder>
+       <zorder>EntertainmentExpense</zorder>
+       <zorder>EntertainmentButton</zorder>
       </widget>
       <widget class="QWidget" name="ShoppingCard" native="true">
        <property name="geometry">
@@ -1038,7 +1054,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="ShoppingButton">
         <property name="geometry">
@@ -1053,7 +1069,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1148,6 +1164,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>ShoppingIcon</zorder>
+       <zorder>ShoppingTitle</zorder>
+       <zorder>ShoppingExpense</zorder>
+       <zorder>ShoppingButton</zorder>
       </widget>
       <widget class="QWidget" name="BillsCard" native="true">
        <property name="geometry">
@@ -1162,7 +1182,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:transparent;</string>
+        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
        </property>
        <widget class="QPushButton" name="BillsButton">
         <property name="geometry">
@@ -1177,7 +1197,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
+         <string notr="true">background-color:transparent;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1272,6 +1292,10 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <zorder>BillsIcon</zorder>
+       <zorder>BillsTitle</zorder>
+       <zorder>BillsExpense</zorder>
+       <zorder>BillsButton</zorder>
       </widget>
      </widget>
     </widget>
@@ -1385,6 +1409,8 @@ Last Month’s total expense: Rs. 2160</string>
        <font>
         <family>Monsterrat</family>
         <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
        </font>
       </property>
       <property name="cursor">
@@ -1392,7 +1418,7 @@ Last Month’s total expense: Rs. 2160</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QCommandLinkButton{
-color:#ffffff;font-size:15px;font-family:Monsterrat;
+color:#ffffff;font-family:Monsterrat;
 }
 QCommandLinkButton:hover{
 border-style:hidden;
@@ -1532,8 +1558,16 @@ border-radius:25px
                    <height>28</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Monsterrat</family>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="styleSheet">
-                  <string notr="true">font-size:13px;font-family:Monsterrat;color:#ffffff;text-align:center;</string>
+                  <string notr="true">font-family:Monsterrat;color:#ffffff;text-align:center;</string>
                  </property>
                  <property name="text">
                   <string>This Month</string>
@@ -1554,13 +1588,20 @@ border-radius:25px
                    <height>28</height>
                   </size>
                  </property>
+                 <property name="font">
+                  <font>
+                   <family>Monsterrat</family>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="cursor">
                   <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">border:none;
             outline:none;
-            
             color:#FFF;
             border-radius:5px;
             text-align:center;
@@ -1601,8 +1642,16 @@ border-radius:25px
                      <height>28</height>
                     </size>
                    </property>
+                   <property name="font">
+                    <font>
+                     <family>Monsterrat</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">font-size:13px;font-family:Monsterrat;color:#ffffff</string>
+                    <string notr="true">font-family:Monsterrat;color:#ffffff</string>
                    </property>
                    <property name="text">
                     <string>Previous Months</string>
@@ -1623,11 +1672,19 @@ border-radius:25px
                      <height>28</height>
                     </size>
                    </property>
+                   <property name="font">
+                    <font>
+                     <family>Monsterrat</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
                    <property name="cursor">
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font-size:13px;font-family:Monsterrat;background:#604E91;
+                    <string notr="true">font-family:Monsterrat;background:#604E91;
 color:#ffffff</string>
                    </property>
                    <item>
