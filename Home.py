@@ -1,10 +1,12 @@
+from turtle import color
 from PyQt5 import QtWidgets,uic
 from PyQt5 import QtCore
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication,QMainWindow,QPushButton,QStackedWidget,QLineEdit, QWidget,QGraphicsDropShadowEffect,QComboBox,QLabel,QCommandLinkButton,QVBoxLayout,QHBoxLayout,QSpacerItem
-from PyQt5.QtGui import QIntValidator,QColor
+from PyQt5.QtGui import QIntValidator,QColor,QPixmap
 import sys,os
 from datetime import datetime
+import calendar
 import db
 
 
@@ -12,7 +14,7 @@ import db
 '''
 global functions
 '''
-        
+       
 
 class HomePage(QMainWindow):
     def __init__(self):
@@ -26,6 +28,8 @@ class HomePage(QMainWindow):
         self.vlayout=self.findChild(QVBoxLayout,"thisMonth_layout")
         self.vlayout1=self.findChild(QVBoxLayout,"prevMonth_layout")
         self.vspacer=QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.MinimumExpanding)
+
+        
         
         self.setShadow()
 
@@ -35,27 +39,54 @@ class HomePage(QMainWindow):
     
     def list_label(self,expense,time):
         date_time=datetime.fromtimestamp(time)
+        day_=date_time.day
+        month_=date_time.month
+        year_=date_time.year
+        hour_=date_time.hour
+        minute_=date_time.minute
+        monthName=calendar.month_name[month_]
+        
+        hbox1=QHBoxLayout()
+        widget=QWidget()
+        widget.setMinimumSize(QtCore.QSize(460,50))
+        widget.setMaximumSize(QtCore.QSize(460,50))
+        widget.setStyleSheet(
+            "background-color:#3A2C5F;\n"
+            "border-radius:6px;\n"
+            "padding-bottom:10px;\n"
+        )
+        #hbox1.setGeometry(QtCore.QRect(0,0,460,50))
+        hbox1.setAlignment(QtCore.Qt.AlignVCenter)
         hbox=QHBoxLayout()
         expense_lable=QLabel()
-        expense_lable.setMinimumSize(QtCore.QSize(460,40))
-        expense_lable.setMaximumSize(QtCore.QSize(460,40))
-        expense_lable.setStyleSheet("border:1px ;\n"
+        #expense_lable.setGeometry(QtCore.QRect(0, 0, 225, 40))
+        expense_lable.setMinimumSize(QtCore.QSize(220,40))
+        expense_lable.setMaximumSize(QtCore.QSize(220,40))
+        expense_lable.setStyleSheet(
+            "border-radius:6px;\n"
+            "background:#3A2C5F;\n"
+            "font-family:Monsterrat;\n"
+            "color:#ffffff")
+        # expense_lable.setText("Rs."+str(expense)+"\t".expandtabs(50)+str(day_)+" "+monthName+" "+str(year_)+" "+str(hour_)+":"+str(minute_)+"\t")
+        expense_lable.setText("\t".expandtabs(4)+"Rs."+str(expense))
+        expense_lable.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        time_lable=QLabel()
+        #time_lable.setGeometry(QtCore.QRect(230, 0, 225, 40))
+        time_lable.setMinimumSize(QtCore.QSize(220,40))
+        time_lable.setMaximumSize(QtCore.QSize(220,40))
+        time_lable.setStyleSheet(
             "border-radius:6px;\n"
             "background:#3A2C5F;\n"
             "color:#ffffff")
-        expense_lable.setText(str(expense)+"\t".expandtabs(70)+str(date_time)+"\t")
-        expense_lable.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
-        # time_lable=QLabel()
-        # time_lable.setMinimumSize(QtCore.QSize(230,40))
-        # time_lable.setMaximumSize(QtCore.QSize(230,40))
-        # time_lable.setStyleSheet("border:1px ;\n"
-        #     "border-radius:6px;\n"
-        #     "background:#3A2C5F;\n"
-        #     "color:#ffffff")
-        # time_lable.setText(str(date_time))
-        # time_lable.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        hbox.addWidget(expense_lable)
-        # hbox.addWidget(time_lable)
+        time_lable.setText(str(day_)+" "+monthName+" "+str(year_)+" "+str(hour_)+":"+str(minute_)+"\t".expandtabs(4))
+        time_lable.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
+        # expense_lable=QtWidgets.QLabel(widget)
+        # time_lable=QtWidgets.QLabel(widget)
+        hbox.addWidget(widget)
+        # hbox.addWidget(color('white'))
+        hbox1.addWidget(expense_lable)
+        hbox1.addWidget(time_lable)
+        widget.setLayout(hbox1)
         return hbox
 
     def display(self):
@@ -64,20 +95,27 @@ class HomePage(QMainWindow):
         button press event
         '''
         #self.firstPage=self.findChild(QWidget,"page")
-        self.findChild(QPushButton,"FoodButton").clicked.connect(lambda state: self.next("Food"))
-        self.findChild(QPushButton,"GroceriesButton").clicked.connect(lambda state: self.next("Groceries"))
-        self.findChild(QPushButton,"ShoppingButton").clicked.connect(lambda state: self.next("Shopping"))
-        self.findChild(QPushButton,"TravelButton").clicked.connect(lambda state: self.next("Travel"))
-        self.findChild(QPushButton,"EntertainmentButton").clicked.connect(lambda state: self.next("Entertainment"))
-        self.findChild(QPushButton,"BillsButton").clicked.connect(lambda state: self.next("Bills"))
+        Food = QPixmap('./assets/icons8-salami-pizza-48.png')
+        Groceries=QPixmap('./assets/icons8-groceries-64.png')
+        Shopping=QPixmap('./assets/icons8-shopping-cart-48.png')
+        Travel=QPixmap('./assets/icons8-aeroplane-64.png')
+        Entertainment=QPixmap('./assets/icons8-popcorn-58.png')
+        Bills=QPixmap('./assets/icons8-bills-64.png')
+
+        self.findChild(QPushButton,"FoodButton").clicked.connect(lambda state: self.next("Food",Food))
+        self.findChild(QPushButton,"GroceriesButton").clicked.connect(lambda state: self.next("Groceries",Groceries))
+        self.findChild(QPushButton,"ShoppingButton").clicked.connect(lambda state: self.next("Shopping",Shopping))
+        self.findChild(QPushButton,"TravelButton").clicked.connect(lambda state: self.next("Travel",Travel))
+        self.findChild(QPushButton,"EntertainmentButton").clicked.connect(lambda state: self.next("Entertainment",Entertainment))
+        self.findChild(QPushButton,"BillsButton").clicked.connect(lambda state: self.next("Bills",Bills))
         self.findChild(QPushButton,"NewExpenseAdd").clicked.connect(lambda state: self.addExpense())
         self.findChild(QCommandLinkButton,"Back").clicked.connect(lambda state:self.backAndDelete(self.vlayout))
         self.findChild(QCommandLinkButton,"Back").clicked.connect(lambda state:self.delete(self.vlayout1))
 
     def backAndDelete(self,vlayout):
         self.findChild(QStackedWidget,"stackedWidget").setCurrentIndex(0)
-        self.findChild(QComboBox,"sortBy_1").setCurrentText("Sort By")
-        self.findChild(QComboBox,"sortBy_2").setCurrentText("Sort By")
+        self.findChild(QComboBox,"sortBy_1").setCurrentText("Date")
+        self.findChild(QComboBox,"sortBy_2").setCurrentText("Date")
         if vlayout is not None:
             while vlayout.count():
                 item = vlayout.takeAt(0)
@@ -114,15 +152,27 @@ class HomePage(QMainWindow):
 
     def Fun(self,e):
         return e[0]
+    def Fun1(self,e):
+        return e[1]
 
-    def next(self, category):
+    def next(self, category,pngfile):
         # Prepare all the data required in second page here
         self.sortList(category)
         self.sortList1(category)
         self.findChild(QComboBox,"sortBy_1").activated.connect(lambda:self.sortList(category))
         self.findChild(QComboBox,"sortBy_2").activated.connect(lambda:self.sortList1(category))
+
+        self.findChild(QLabel,"expenseTitle").setText("Expense On "+category+" category"+"\t".expandtabs(20))
+        
+        categoryLogo=self.findChild(QLabel,"categoryLogo")
+        categoryLogo.setPixmap(pngfile)
+        # categoryLogo.setStyleSheet("""
+        # QLable{
+        #     background-image:url(./assets/icons8-aeroplane-64.png);
+        #     }
+        # """)
         # Till here and then increment index to 1
-        print(category)
+        
         self.findChild(QStackedWidget,"stackedWidget").setCurrentIndex(1)
         
     def sortList(self,category):
@@ -134,7 +184,7 @@ class HomePage(QMainWindow):
         #sorting the list according to the combobox text
         if sort_1=="Date":
             # self.delete()
-            thisMonthExpenseListByCategory.sort(reverse=True)
+            thisMonthExpenseListByCategory.sort(reverse=True,key=self.Fun1)
             
             for i in range(len(thisMonthExpenseListByCategory)):
                 lab=self.list_label(thisMonthExpenseListByCategory[i][0],thisMonthExpenseListByCategory[i][1])
@@ -174,7 +224,7 @@ class HomePage(QMainWindow):
         sort_2=self.findChild(QComboBox,"sortBy_2").currentText()
         #sorting the list according to the combobox text
         if sort_2=="Date":
-            previousMonthsExpenseListByCategory.sort(reverse=True)
+            previousMonthsExpenseListByCategory.sort(reverse=True,key=self.Fun1)
 
             for i in range(len(previousMonthsExpenseListByCategory)):
                 lab=self.list_label(previousMonthsExpenseListByCategory[i][0],previousMonthsExpenseListByCategory[i][1])
@@ -275,6 +325,7 @@ class HomePage(QMainWindow):
         QComboBox {
             border:none;
             outline:none;
+            background-color:#604E91;
             color:#FFF;
             border-radius:5px;
             text-align:center;

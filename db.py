@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import date, datetime, time, timedelta,timezone
 import dateutil.relativedelta
+import calendar
 
 
 conn = sqlite3.connect('test.db')
@@ -27,7 +28,10 @@ def totalExpenseThisMonth():
     # get all expenses from this month
     expenses = conn.execute("SELECT SUM(expense) FROM EXPENSES WHERE timestamp >= ?", (begTime,))
     # return the count
-    return expenses.fetchone()[0]
+    sum = expenses.fetchone()[0]
+    if sum is None:
+        return 0
+    return sum
 
 def totalExpenseLastMonth():
     last_day_of_prev_month = date.today().replace(day=1) - timedelta(days=1)
@@ -63,8 +67,13 @@ def listByCategoryPreviousMonth(category):
     return expenseList.fetchall()
 
 #insertExpense(int(datetime.today().replace(month=3,day=1).timestamp()),"Shopping",60)
-# ex=listByCategoryPreviousMonth("Shopping")
-# print(datetime.fromtimestamp(ex[3][1]))
+ex=listByCategoryPreviousMonth("Shopping")
+# time_data =str(datetime.fromtimestamp(ex[3][1]))
+# format_data = "%y-%m-%d %H:%M:%S"
+ex.sort(reverse=True)
+# today1=today.month
+print(ex)
+# print(calendar.month_name[today])
 # print(int(datetime.today().replace(month=3).timestamp()))
 
 # print(totalExpenseLastMonth())
