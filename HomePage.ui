@@ -539,7 +539,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="FoodButton">
         <property name="geometry">
@@ -554,7 +554,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -649,10 +649,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>FoodIcon</zorder>
-       <zorder>FoodTitle</zorder>
-       <zorder>FoodExpense</zorder>
-       <zorder>FoodButton</zorder>
       </widget>
       <widget class="QWidget" name="TravelCard" native="true">
        <property name="geometry">
@@ -667,7 +663,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="TravelButton">
         <property name="geometry">
@@ -682,7 +678,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -777,10 +773,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>TravelIcon</zorder>
-       <zorder>TravelTitle</zorder>
-       <zorder>TravelExpense</zorder>
-       <zorder>TravelButton</zorder>
       </widget>
       <widget class="QWidget" name="GroceriesCard" native="true">
        <property name="geometry">
@@ -795,7 +787,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="GroceriesButton">
         <property name="geometry">
@@ -813,7 +805,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -908,10 +900,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>GroceriesIcon</zorder>
-       <zorder>GroceriesTitle</zorder>
-       <zorder>GroceriesExpense</zorder>
-       <zorder>GroceriesButton</zorder>
       </widget>
       <widget class="QWidget" name="EntertainmentCard" native="true">
        <property name="geometry">
@@ -926,7 +914,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="EntertainmentButton">
         <property name="geometry">
@@ -941,7 +929,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1036,10 +1024,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>EntertainmentIcon</zorder>
-       <zorder>EntertainmentTitle</zorder>
-       <zorder>EntertainmentExpense</zorder>
-       <zorder>EntertainmentButton</zorder>
       </widget>
       <widget class="QWidget" name="ShoppingCard" native="true">
        <property name="geometry">
@@ -1054,7 +1038,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="ShoppingButton">
         <property name="geometry">
@@ -1069,7 +1053,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1164,10 +1148,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>ShoppingIcon</zorder>
-       <zorder>ShoppingTitle</zorder>
-       <zorder>ShoppingExpense</zorder>
-       <zorder>ShoppingButton</zorder>
       </widget>
       <widget class="QWidget" name="BillsCard" native="true">
        <property name="geometry">
@@ -1182,7 +1162,7 @@ Last Month’s total expense: Rs. 2160</string>
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius:5px;background:#3A2C5F;</string>
+        <string notr="true">border-radius:5px;background:transparent;</string>
        </property>
        <widget class="QPushButton" name="BillsButton">
         <property name="geometry">
@@ -1197,7 +1177,7 @@ Last Month’s total expense: Rs. 2160</string>
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:transparent;border-radius:5px;</string>
+         <string notr="true">background-color:#3A2C5F;border-radius:5px;</string>
         </property>
         <property name="text">
          <string/>
@@ -1292,10 +1272,6 @@ Last Month’s total expense: Rs. 2160</string>
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
-       <zorder>BillsIcon</zorder>
-       <zorder>BillsTitle</zorder>
-       <zorder>BillsExpense</zorder>
-       <zorder>BillsButton</zorder>
       </widget>
      </widget>
     </widget>
@@ -1433,17 +1409,17 @@ border-style:hidden;
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>-2</x>
-        <y>88</y>
+        <x>0</x>
+        <y>100</y>
         <width>501</width>
-        <height>761</height>
+        <height>741</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
         <widget class="QScrollArea" name="scrollArea">
          <property name="styleSheet">
-          <string notr="true"/>
+          <string notr="true">border-style:hidden;</string>
          </property>
          <property name="widgetResizable">
           <bool>true</bool>
@@ -1453,9 +1429,12 @@ border-style:hidden;
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>476</width>
-            <height>804</height>
+            <width>499</width>
+            <height>739</height>
            </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-style:hidden;</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_5">
            <item>
@@ -1479,7 +1458,7 @@ border-style:hidden;
                 </spacer>
                </item>
                <item>
-                <widget class="QLabel" name="label_5">
+                <widget class="QLabel" name="categoryLogo">
                  <property name="maximumSize">
                   <size>
                    <width>52</width>
@@ -1487,15 +1466,13 @@ border-style:hidden;
                   </size>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">background: #604E91;
-
-border-radius:40px;</string>
+                  <string notr="true">background: #9A81DE;
+border:1px solid #9A81DE;
+border-radius:25px
+</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap>assets/icons8-aeroplane-64.png</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -1516,7 +1493,7 @@ border-radius:40px;</string>
                 </spacer>
                </item>
                <item>
-                <widget class="QLabel" name="label_4">
+                <widget class="QLabel" name="expenseTitle">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -1539,7 +1516,7 @@ border-radius:40px;</string>
                   <string notr="true">font-size:20px;font-family:Monsterrat;color:#ffffff</string>
                  </property>
                  <property name="text">
-                  <string>Expences On Food Category         </string>
+                  <string/>
                  </property>
                 </widget>
                </item>
@@ -1556,7 +1533,7 @@ border-radius:40px;</string>
                   </size>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">font-size:15px;font-family:Monsterrat;color:#ffffff</string>
+                  <string notr="true">font-size:13px;font-family:Monsterrat;color:#ffffff;text-align:center;</string>
                  </property>
                  <property name="text">
                   <string>This Month</string>
@@ -1565,9 +1542,15 @@ border-radius:40px;</string>
                </item>
                <item>
                 <widget class="QComboBox" name="sortBy_1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>180</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="maximumSize">
                   <size>
-                   <width>16777215</width>
+                   <width>180</width>
                    <height>28</height>
                   </size>
                  </property>
@@ -1584,11 +1567,6 @@ border-radius:40px;</string>
             font-family:Monsterrat;
         </string>
                  </property>
-                 <item>
-                  <property name="text">
-                   <string>Sort By</string>
-                  </property>
-                 </item>
                  <item>
                   <property name="text">
                    <string>Date</string>
@@ -1624,18 +1602,24 @@ border-radius:40px;</string>
                     </size>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font-size:15px;font-family:Monsterrat;color:#ffffff</string>
+                    <string notr="true">font-size:13px;font-family:Monsterrat;color:#ffffff</string>
                    </property>
                    <property name="text">
-                    <string>Last Month</string>
+                    <string>Previous Months</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QComboBox" name="sortBy_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>180</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>180</width>
                      <height>28</height>
                     </size>
                    </property>
@@ -1643,14 +1627,9 @@ border-radius:40px;</string>
                     <cursorShape>PointingHandCursor</cursorShape>
                    </property>
                    <property name="styleSheet">
-                    <string notr="true">font-size:15px;font-family:Monsterrat;background:#604E91;
+                    <string notr="true">font-size:13px;font-family:Monsterrat;background:#604E91;
 color:#ffffff</string>
                    </property>
-                   <item>
-                    <property name="text">
-                     <string>Sort By</string>
-                    </property>
-                   </item>
                    <item>
                     <property name="text">
                      <string>Date</string>
