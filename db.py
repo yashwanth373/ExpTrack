@@ -4,7 +4,7 @@ import dateutil.relativedelta
 import calendar
 
 
-conn = sqlite3.connect('test.db')
+conn = sqlite3.connect('expenses.db')
 
 # conn.execute('''CREATE TABLE EXPENSES(timestamp INT PRIMARY KEY NOT NULL, category TEXT NOT NULL, expense INT NOT NULL);''')
 
@@ -91,11 +91,9 @@ def dataForML():
     for i in result:
         timestamp = i[0]
         expense = i[1]
-        # number of days in the timestamp
-        days = int(timestamp / (24 * 60 * 60))
-        if days in dayExpenses:
-            dayExpenses[days] += expense
+        day = int(datetime.fromtimestamp(timestamp).replace(hour=0,minute=0,second=0,microsecond=0).timestamp())
+        if day in dayExpenses:
+            dayExpenses[day] += expense
         else:
-            dayExpenses[days] = expense
-    expensesList = list(dayExpenses.values())
-    return expensesList
+            dayExpenses[day] = expense
+    return list(dayExpenses.values())

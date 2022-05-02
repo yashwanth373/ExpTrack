@@ -6,6 +6,8 @@ import pickle as pkl
 
 def trainAndSaveModel():
     expenses = dataForML()
+    if expenses == []:
+        return
     expensesDF = pd.DataFrame(expenses)
     model = auto_arima(expensesDF)
     pkl.dump(model, open('model.pkl', 'wb'))
