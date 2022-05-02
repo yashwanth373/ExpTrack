@@ -67,15 +67,35 @@ def listByCategoryPreviousMonth(category):
     return expenseList.fetchall()
 
 #insertExpense(int(datetime.today().replace(month=3,day=1).timestamp()),"Shopping",60)
-ex=listByCategoryPreviousMonth("Shopping")
+# ex=listByCategoryPreviousMonth("Shopping")
 # time_data =str(datetime.fromtimestamp(ex[3][1]))
 # format_data = "%y-%m-%d %H:%M:%S"
-ex.sort(reverse=True)
+# ex.sort(reverse=True)
 # today1=today.month
-print(ex)
+# print(ex)
 # print(calendar.month_name[today])
 # print(int(datetime.today().replace(month=3).timestamp()))
 
 # print(totalExpenseLastMonth())
 #for i in ex:
 #print(datetime.today().replace(month=1,day=1,hour=0,minute=0,second=0,microsecond=0))
+
+
+
+# DATA FROM ML
+
+def dataForML():
+    expenses = conn.execute("SELECT timestamp,expense FROM EXPENSES where category = 'Food' ORDER BY timestamp")
+    result = expenses.fetchall()
+    dayExpenses = {}
+    for i in result:
+        timestamp = i[0]
+        expense = i[1]
+        # number of days in the timestamp
+        days = int(timestamp / (24 * 60 * 60))
+        if days in dayExpenses:
+            dayExpenses[days] += expense
+        else:
+            dayExpenses[days] = expense
+    expensesList = list(dayExpenses.values())
+    return expensesList
