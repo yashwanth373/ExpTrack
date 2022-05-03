@@ -66,21 +66,6 @@ def listByCategoryPreviousMonth(category):
     expenseList=conn.execute("SELECT expense,timestamp FROM EXPENSES WHERE category=? AND timestamp >= ? AND timestamp<=?",(category,begTime,lastMonthEndTime))
     return expenseList.fetchall()
 
-#insertExpense(int(datetime.today().replace(month=3,day=1).timestamp()),"Shopping",60)
-# ex=listByCategoryPreviousMonth("Shopping")
-# time_data =str(datetime.fromtimestamp(ex[3][1]))
-# format_data = "%y-%m-%d %H:%M:%S"
-# ex.sort(reverse=True)
-# today1=today.month
-# print(ex)
-# print(calendar.month_name[today])
-# print(int(datetime.today().replace(month=3).timestamp()))
-
-# print(totalExpenseLastMonth())
-#for i in ex:
-#print(datetime.today().replace(month=1,day=1,hour=0,minute=0,second=0,microsecond=0))
-
-
 
 # DATA FROM ML
 

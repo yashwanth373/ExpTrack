@@ -9,6 +9,8 @@ from datetime import datetime
 import calendar
 import db
 
+from Fedstation import Fedstation
+
 
 
 '''
@@ -407,6 +409,8 @@ class HomePage(QMainWindow):
     
 
 def display():  
+    fed = Fedstation.Fedstation()
+    fed.initializeProject('exp_track','16513167670717TZV0KI','"C:\\Users\\Yashw\\Documents\\4-2\\Major Project\\Code\\THE FRONT\\ExpTrack\\trainAndSave.py"')
     app=QApplication(sys.argv)
     HomeWindow=HomePage()
     HomeWindow.display()
